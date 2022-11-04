@@ -1,2 +1,3 @@
 generators:
 - config-policies.yaml
+- cluster-policies.yaml

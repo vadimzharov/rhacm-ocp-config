@@ -25,7 +25,8 @@ policies:
     controls:
       - "manfifests/name-based" 
     standards:
-      - "Name-based configuration"      
+      - "Name-based configuration"
+    complianceType: "mustonlyhave"
   - name: env-based-example
     manifests:               
       - path: manifests/env-based

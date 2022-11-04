@@ -1,0 +1,21 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: cluster-policies-pg
+policyDefaults:                                     
+  namespace: config-policies
+  remediationAction: inform
+  categories:
+    - "Individual configuration"
+    - "Cluster selector cluster-config=true"
+  placement:                 
+    clusterSelectors:        
+      cluster-config: "true"  
+policies:                    
+  - name: ingress-replicas
+    manifests:               
+      - path: manifests/ingress
+    controls:
+      - "manfifests/ingress" 
+    standards:
+      - "Ingress configuration"
