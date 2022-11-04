@@ -1,0 +1,14 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: config-policies-manifests
+  namespace: config-policies
+  labels: 
+    rhacm-app: config-policies-manifests
+  annotations:
+    apps.open-cluster-management.io/git-path: config-policies
+    apps.open-cluster-management.io/git-branch: main
+spec:
+  channel: config-policies/vadim-channel
+  placement:
+    local: true
