@@ -19,4 +19,11 @@ policies:
       - "manfifests/plain" 
     standards:
       - "Plain configuration"
+  - name: name-based-example
+    manifests:               
+      - path: manifests/name-based
+    controls:
+      - "manfifests/name-based" 
+    standards:
+      - "Name-based configuration"      
 
