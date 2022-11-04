@@ -7,6 +7,7 @@ policyDefaults:
   remediationAction: enforce
   categories:
     - "Base configuration"
+    - "Cluster selector base-config=true"
   placement:                 
     clusterSelectors:        
       base-config: "true"  
