@@ -1,0 +1,15 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: common-policies-pg
+policyDefaults:                                     
+  namespace: configuration-policies 
+  remediationAction: enforce 
+  placement:                 
+    clusterSelectors:        
+      base-config: "true"  
+policies:                    
+  - name: plain-example
+    manifests:               
+      - path: manifests/plain
+
