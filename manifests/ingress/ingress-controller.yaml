@@ -4,4 +4,4 @@ metadata:
   name: default
   namespace: openshift-ingress-operator
 spec:
-  replicas: '{{hub fromConfigMap "config-policies" .ManagedClusterName "ingress-replicas" hub}}'
+  replicas: '{{hub fromConfigMap "config-policies" .ManagedClusterName "ingress-replicas" | toInt hub}}'
