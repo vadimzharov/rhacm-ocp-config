@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: vadim-channel
+  namespace: config-policies
+spec:
+    type: Git
+    pathname: ssh://git@github.com:vadimzharov/rhacm-ocp-config.git
