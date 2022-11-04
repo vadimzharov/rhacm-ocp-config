@@ -31,7 +31,7 @@ policies:
       - path: manifests/env-based
     consolidateManifests: false
     controls:
-      - "manfifests/env--based" 
+      - "manfifests/env-based" 
     standards:
       - "Environment-based configuration"
 
