@@ -29,6 +29,7 @@ policies:
   - name: env-based-example
     manifests:               
       - path: manifests/env-based
+    consolidateManifests: false
     controls:
       - "manfifests/env--based" 
     standards:
