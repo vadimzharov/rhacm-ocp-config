@@ -26,4 +26,11 @@ policies:
       - "manfifests/name-based" 
     standards:
       - "Name-based configuration"      
+  - name: env-based-example
+    manifests:               
+      - path: manifests/env-based
+    controls:
+      - "manfifests/env--based" 
+    standards:
+      - "Environment-based configuration"    
 
