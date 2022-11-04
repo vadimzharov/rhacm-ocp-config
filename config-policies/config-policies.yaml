@@ -17,6 +17,6 @@ policies:
       - path: manifests/plain
     controls:
       - "manfifests/plain" 
-    standard:
+    standards:
       - "Plain configuration"
 
