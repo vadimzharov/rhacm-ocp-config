@@ -1,11 +1,11 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: base-appsets-deploy
+  name: base-appsets-true
   namespace: multicloud-gitops-hub
 spec:
   predicates:
   - requiredClusterSelector:
       labelSelector:
         matchLabels:
-          base-appsets: deploy
+          base-appsets: "true"
