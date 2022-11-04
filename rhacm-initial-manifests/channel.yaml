@@ -5,4 +5,4 @@ metadata:
   namespace: config-policies
 spec:
     type: Git
-    pathname: ssh://git@github.com:vadimzharov/rhacm-ocp-config.git
+    pathname: https://github.com/vadimzharov/rhacm-ocp-config.git
