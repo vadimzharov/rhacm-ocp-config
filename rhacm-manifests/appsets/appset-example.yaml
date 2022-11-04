@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: sample-application-set
+  namespace: sample-gitops-namespace
+spec:
+  generators:
+    - clusterDecisionResource:
+        configMapRef: acm-placement
+        labelSelector:
+          matchLabels:
+            cluster.open-cluster-management.io/placement: apps-base-true
+        requeueAfterSeconds: 180
+  template:
+    metadata:
+      name: sample-application-{{name}}
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/sampleapp/apprepo.git
+        targetRevision: main
+        path: sample-application
+      destination:
+        namespace: sample-application
+        server: "{{server}}"
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+          - PruneLast=true
+          - Replace=true
+          - ApplyOutOfSyncOnly=true
+          - Validate=false
+        automated:
+          prune: true
+          allowEmpty: true
+          selfHeal: true
