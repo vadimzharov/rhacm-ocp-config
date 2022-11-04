@@ -9,7 +9,7 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: apps-base-true
+            cluster.open-cluster-management.io/placement: base-appsets-true
         requeueAfterSeconds: 180
   template:
     metadata:
