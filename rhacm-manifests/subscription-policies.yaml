@@ -11,4 +11,5 @@ metadata:
 spec:
   channel: config-policies/vadim-channel
   placement:
-    local: true
+    clusters:
+      - name: local-cluster
