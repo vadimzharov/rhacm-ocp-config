@@ -1,12 +1,12 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
-  name: common-policies-pg
+  name: base-policies-pg
 policyDefaults:                                     
   namespace: config-policies
   remediationAction: enforce
   categories:
-    - "Common configuration"
+    - "Base configuration"
   placement:                 
     clusterSelectors:        
       base-config: "true"  
