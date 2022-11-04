@@ -8,4 +8,4 @@ spec:
   - requiredClusterSelector:
       labelSelector:
         matchLabels:
-          apps-base: true
+          apps-base: "true"
