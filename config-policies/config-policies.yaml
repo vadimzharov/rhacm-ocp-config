@@ -4,7 +4,9 @@ metadata:
   name: common-policies-pg
 policyDefaults:                                     
   namespace: config-policies
-  remediationAction: enforce 
+  remediationAction: enforce
+  categories:
+    - "Common configuration"
   placement:                 
     clusterSelectors:        
       base-config: "true"  
@@ -12,4 +14,8 @@ policies:
   - name: plain-example
     manifests:               
       - path: manifests/plain
+    controls:
+      - "manfifests/plain" 
+    standard:
+      - "Plain configuration"
 
