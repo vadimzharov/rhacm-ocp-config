@@ -1,0 +1,9 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: config-policies-manifests
+  namespace: config-policies
+spec:
+  selector:
+    matchLabels:
+      rhacm-app: config-policies-manifests
