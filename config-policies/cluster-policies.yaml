@@ -16,6 +16,6 @@ policies:
     manifests:               
       - path: manifests/ingress
     controls:
-      - "manfifests/ingress" 
+      - "manifests/ingress" 
     standards:
       - "Ingress configuration"

@@ -16,14 +16,14 @@ policies:
     manifests:               
       - path: manifests/plain
     controls:
-      - "manfifests/plain" 
+      - "manifests/plain" 
     standards:
       - "Plain configuration"
   - name: name-based-example
     manifests:               
       - path: manifests/name-based
     controls:
-      - "manfifests/name-based" 
+      - "manifests/name-based" 
     standards:
       - "Name-based configuration"
     complianceType: "mustonlyhave"
@@ -32,7 +32,7 @@ policies:
       - path: manifests/env-based
     consolidateManifests: false
     controls:
-      - "manfifests/env-based" 
+      - "manifests/env-based" 
     standards:
       - "Environment-based configuration"
 
