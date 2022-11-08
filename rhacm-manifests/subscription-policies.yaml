@@ -6,10 +6,17 @@ metadata:
   labels: 
     rhacm-app: config-policies-manifests
   annotations:
-    apps.open-cluster-management.io/git-path: config-policies
+    apps.open-cluster-management.io/git-path: /
     apps.open-cluster-management.io/git-branch: main
 spec:
   channel: config-policies/vadim-channel
   placement:
     clusters:
       - name: local-cluster
+  packageOverrides:
+    - packageName: kustomization
+      packageOverrides: 
+        - value: |
+            generators:
+              - config-policies/config-policies.yaml
+              - config-policies/cluster-policies.yaml
