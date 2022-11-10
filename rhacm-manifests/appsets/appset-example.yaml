@@ -18,9 +18,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/sampleapp/apprepo.git
-        targetRevision: main
-        path: sample-application
+        repoURL: https://github.com/argoproj/argocd-example-apps.git
+        targetRevision: master
+        path: guestbook
       destination:
         namespace: sample-application
         server: "{{server}}"
