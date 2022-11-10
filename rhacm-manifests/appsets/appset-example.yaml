@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: sample-application-set
-#  namespace: multicloud-gitops-hub
   namespace: openshift-gitops
 spec:
   generators:

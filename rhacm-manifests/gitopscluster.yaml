@@ -2,12 +2,10 @@ apiVersion: apps.open-cluster-management.io/v1beta1
 kind: GitOpsCluster
 metadata:
   name: gitops-clusters
-#  namespace: multicloud-gitops-hub
   namespace: openshift-gitops
 spec:
   argoServer:
     cluster: local-cluster
-#    argoNamespace: multicloud-gitops-hub
     argoNamespace: openshift-gitops
   placementRef:
     kind: Placement

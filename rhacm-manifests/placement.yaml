@@ -3,7 +3,6 @@ kind: Placement
 metadata:
   name: all-openshift-clusters
   namespace: openshift-gitops
-#  namespace: multicloud-gitops-hub
 spec:
   predicates:
   - requiredClusterSelector:
