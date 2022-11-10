@@ -19,3 +19,15 @@ policies:
       - "manifests/ingress" 
     standards:
       - "Ingress configuration"
+  - name: tekton-install-dev
+    manifests:               
+      - path: manifests/tekton
+    controls:
+      - "manifests/tekton" 
+    standards:
+      - "Additional operators"
+    categories:
+      - "Cluster selector tekton-install=dev"
+    placement:                 
+      clusterSelectors:        
+        tekton-install: "dev"        

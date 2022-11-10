@@ -19,3 +19,15 @@ policies:
       - "manifests/ingress" 
     standards:
       - "Ingress configuration"
+  - name: tekton-install-prod
+    manifests:               
+      - path: manifests/tekton
+    controls:
+      - "manifests/tekton" 
+    standards:
+      - "Additional operators"
+    categories:
+      - "Cluster selector tekton-install=prod"
+    placement:                 
+      clusterSelectors:        
+        tekton-install: "prod"
