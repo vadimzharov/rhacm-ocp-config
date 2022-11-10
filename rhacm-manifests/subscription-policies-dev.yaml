@@ -1,0 +1,22 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: config-policies-dev-manifests
+  namespace: config-policies
+  labels: 
+    rhacm-app: config-policies-manifests
+  annotations:
+    apps.open-cluster-management.io/git-path: /
+    apps.open-cluster-management.io/git-branch: dev
+spec:
+  channel: config-policies/vadim-channel
+  placement:
+    clusters:
+      - name: local-cluster
+  packageOverrides:
+    - packageName: kustomization
+      packageOverrides: 
+        - value: |
+            generators:
+              - config-policies-dev/base-configuration.yaml
+              - config-policies-dev/optional-configuration.yaml

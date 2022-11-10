@@ -1,0 +1,21 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: cluster-policies-dev-pg
+policyDefaults:                                     
+  namespace: config-policies
+  remediationAction: inform
+  categories:
+    - "Individual configuration (DEV)"
+    - "Cluster selector addon-config=dev"
+  placement:                 
+    clusterSelectors:        
+      addon-config: "dev"  
+policies:                    
+  - name: ingress-replicas-dev
+    manifests:               
+      - path: manifests/ingress
+    controls:
+      - "manifests/ingress" 
+    standards:
+      - "Ingress configuration"

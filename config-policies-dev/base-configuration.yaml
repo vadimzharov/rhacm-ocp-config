@@ -1,0 +1,38 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: base-policies-dev-pg
+policyDefaults:                                     
+  namespace: config-policies
+  remediationAction: enforce
+  categories:
+    - "Base configuration (DEV)"
+    - "Cluster selector base-config=dev"
+  placement:                 
+    clusterSelectors:        
+      base-config: "dev"  
+policies:                    
+  - name: plain-example-dev
+    manifests:               
+      - path: manifests/plain
+    controls:
+      - "manifests/plain" 
+    standards:
+      - "Plain configuration"
+  - name: name-based-example-dev
+    manifests:               
+      - path: manifests/name-based
+    controls:
+      - "manifests/name-based" 
+    standards:
+      - "Name-based configuration"
+    complianceType: "mustonlyhave"
+  - name: env-based-example-dev
+    manifests:               
+      - path: manifests/env-based
+    consolidateManifests: false
+    controls:
+      - "manifests/env-based"
+    standards:
+      - "Environment-based configuration"
+

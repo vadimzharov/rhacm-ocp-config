@@ -1,13 +1,13 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: config-policies-manifests
+  name: config-policies-prod-manifests
   namespace: config-policies
   labels: 
     rhacm-app: config-policies-manifests
   annotations:
     apps.open-cluster-management.io/git-path: /
-    apps.open-cluster-management.io/git-branch: main
+    apps.open-cluster-management.io/git-branch: prod
 spec:
   channel: config-policies/vadim-channel
   placement:
@@ -18,5 +18,5 @@ spec:
       packageOverrides: 
         - value: |
             generators:
-              - config-policies/config-policies.yaml
-              - config-policies/cluster-policies.yaml
+              - config-policies-prod/base-configuration.yaml
+              - config-policies-prod/optional-configuration.yaml
