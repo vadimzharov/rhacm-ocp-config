@@ -30,4 +30,16 @@ policies:
       - "Cluster selector tekton-install=dev"
     placement:                 
       clusterSelectors:        
-        tekton-install: "dev"        
+        tekton-install: "dev"
+  - name: custom-console-dev
+    manifests:               
+      - path: manifests/console
+    controls:
+      - "manifests/console" 
+    standards:
+      - "Additional operators"
+    categories:
+      - "Cluster selector custom-console=dev"
+    placement:                 
+      clusterSelectors:        
+        custom-console: "dev"          
