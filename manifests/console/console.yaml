@@ -7,4 +7,4 @@ spec:
     customLogoFile:
       key: console-custom-logo.png
       name: console-custom-logo
-    customProductName: My Custom Console
+    customProductName: 'My {{ fromClusterClaim "custom-console" }} console'
