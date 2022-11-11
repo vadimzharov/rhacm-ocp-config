@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: console-custom-logo
-  namespace: openshift-config
-data:
-  console-custom-logo.png: '{{hub fromConfigMap "config-policies" (fromClusterClaim "console-logo") "console-custom-logos" hub}}'
