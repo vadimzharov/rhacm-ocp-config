@@ -32,6 +32,7 @@ policies:
       clusterSelectors:        
         tekton-install: "dev"
   - name: custom-console-dev
+    remediationAction: enforce  
     manifests:               
       - path: manifests/console
     controls:
