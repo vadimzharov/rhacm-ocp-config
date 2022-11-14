@@ -1,11 +1,11 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
 metadata:
-  name: '{{ fromClusterClaim "cluster-name"}}-resource'
-  namespace: '{{ fromClusterClaim "cluster-name"}}-catalog'
+  name: '{{ fromClusterClaim "name"}}-resource'
+  namespace: '{{ fromClusterClaim "name"}}-catalog'
 spec:
   sourceType: grpc
-  image: 'sandbox.opentlc.com/example/catalog-for-{{ fromClusterClaim "cluster-name"}}:tag'
+  image: 'sandbox.opentlc.com/example/catalog-for-{{ fromClusterClaim "name"}}:tag'
   displayName: Plain operator catalog
   publisher: grpc
   updateStrategy:
