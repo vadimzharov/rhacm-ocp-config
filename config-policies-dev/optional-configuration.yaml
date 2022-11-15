@@ -34,10 +34,10 @@ policies:
   - name: custom-cloud-console-dev
     remediationAction: enforce  
     manifests:               
-      - path: manifests/console/logo-cloud
-      - path: manifests/console/console.yaml
+      - path: manifests/console-logo/logo-cloud
+      - path: manifests/console-logo/console.yaml
     controls:
-      - "manifests/console" 
+      - "manifests/console-logo" 
     standards:
       - "Additional operators"
     categories:
@@ -48,10 +48,10 @@ policies:
   - name: custom-onprem-console-dev
     remediationAction: enforce  
     manifests:               
-      - path: manifests/console/logo-onprem
-      - path: manifests/console/console.yaml
+      - path: manifests/console-logo/logo-onprem
+      - path: manifests/console-logo/console.yaml
     controls:
-      - "manifests/console" 
+      - "manifests/console-logo" 
     standards:
       - "Additional operators"
     categories:
