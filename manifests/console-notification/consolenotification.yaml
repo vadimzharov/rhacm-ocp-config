@@ -3,7 +3,7 @@ kind: ConsoleNotification
 metadata:
   name: '{{ fromClusterClaim "base-config"}}'
 spec:
-  text: ' printf "%s" {{ fromConfigMap "admin-ns" "console-notification" (fromClusterClaim "base-config") }}'
+  text: '{{ fromConfigMap "admin-ns" "console-notification" (fromClusterClaim "base-config") }}'
   location: BannerTop 
   link:
     href: 'https://www.my-org.com/{{ fromClusterClaim ("base-config") }}'
