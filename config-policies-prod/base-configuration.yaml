@@ -35,4 +35,11 @@ policies:
       - "manifests/env-based"
     standards:
       - "Environment-based configuration"
-
+  - name: console-notification-prod
+    manifests:               
+      - path: manifests/console-notification
+    consolidateManifests: false
+    controls:
+      - "manifests/console-notification"
+    standards:
+      - Console configuration"

@@ -39,7 +39,7 @@ policies:
     controls:
       - "manifests/console-logo" 
     standards:
-      - "Additional operators"
+      - "Console configuration"
     categories:
       - "Cluster selector custom-console=cloud"
     placement:                 
@@ -53,7 +53,7 @@ policies:
     controls:
       - "manifests/console-logo" 
     standards:
-      - "Additional operators"
+      - "Console configuration"
     categories:
       - "Cluster selector custom-console=onprem"
     placement:                 
