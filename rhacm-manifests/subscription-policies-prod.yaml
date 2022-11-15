@@ -17,6 +17,6 @@ spec:
     - packageName: kustomization
       packageOverrides: 
         - value: |
-generators:
-  - config-policies-prod/base-configuration.yaml
-  - config-policies-prod/optional-configuration.yaml
+            generators:
+              - config-policies-prod/base-configuration.yaml
+              - config-policies-prod/optional-configuration.yaml
