@@ -3,7 +3,7 @@ kind: ConsoleNotification
 metadata:
   name: '{{ fromClusterClaim "base-config"}}'
 spec:
-  text: '{{ fromConfigMap "admin-ns" "console-notification" (fromClusterClaim "base-config") }} OpenShift version {{ fromClusterClaim "version.openshift.io" }}'
+  text: '{{ fromConfigMap "admin-ns" "console-notification" (fromClusterClaim "base-config") }} OpenShift version {{ fromClusterClaim "version.openshift.io" }}. The name of the cluster in RHACM is {{ fromSecret "open-cluster-management-agent" "hub-kubeconfig-secret" "cluster-name" }}'
   location: BannerTop 
   link:
     href: 'https://www.my-org.com/{{ fromClusterClaim ("base-config") }}'

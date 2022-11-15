@@ -4,5 +4,5 @@ metadata:
   name: console-notification
   namespace: admin-ns
 data:
-  dev: "This is development cluster, you can do whatever you want"
-  prod: "This is production cluster. Touch it and you doomed"
+  dev: "This is development cluster, you can do whatever you want."
+  prod: "This is production cluster. Touch it and you doomed."
