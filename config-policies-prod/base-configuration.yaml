@@ -35,10 +35,4 @@ policies:
       - "manifests/env-based"
     standards:
       - "Environment-based configuration"
-  - name: etcd-encryption-prod
-    manifests:               
-      - path: manifests/etcd-encryption
-    controls:
-      - "manifests/etcd-encryption"
-    standards:
-      - "ETCD configuration"
+
