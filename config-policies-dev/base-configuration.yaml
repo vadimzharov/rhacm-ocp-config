@@ -42,4 +42,4 @@ policies:
     controls:
       - "manifests/console-notification"
     standards:
-      - Console configuration"
+      - "Console configuration"
