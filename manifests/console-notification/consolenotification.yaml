@@ -7,5 +7,6 @@ spec:
   location: BannerTop 
   link:
     href: 'https://www.my-org.com/{{ fromClusterClaim ("base-config") }}'
+    text: Link configured by RHACM
   color: '#fff'
   backgroundColor: '#0088ce'
