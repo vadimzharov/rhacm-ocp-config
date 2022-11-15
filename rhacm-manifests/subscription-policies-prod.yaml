@@ -20,3 +20,5 @@ spec:
             generators:
               - config-policies-prod/base-configuration.yaml
               - config-policies-prod/optional-configuration.yaml
+            commonAnnotations:
+              policy.open-cluster-management.io/trigger-update: "5"              
