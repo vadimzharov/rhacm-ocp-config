@@ -11,6 +11,8 @@ spec:
           matchLabels:
             cluster.open-cluster-management.io/placement: base-appsets-true
         requeueAfterSeconds: 180
+  syncPolicy:
+    preserveResourcesOnDeletion: false
   template:
     metadata:
       name: sample-application-{{name}}
