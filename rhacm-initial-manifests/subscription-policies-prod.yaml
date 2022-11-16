@@ -4,7 +4,7 @@ metadata:
   name: config-policies-prod-manifests
   namespace: config-policies
   labels: 
-    rhacm-app: config-policies-manifests
+    rhacm-app: rhacm-config-policies
   annotations:
     apps.open-cluster-management.io/git-path: /
     apps.open-cluster-management.io/git-branch: prod
