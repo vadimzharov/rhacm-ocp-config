@@ -6,4 +6,4 @@ metadata:
 spec:
   selector:
     matchLabels:
-      rhacm-app: config-policies-manifests
+      rhacm-app: rhacm-config-policies
