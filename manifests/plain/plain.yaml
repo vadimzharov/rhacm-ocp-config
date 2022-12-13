@@ -5,7 +5,7 @@ metadata:
   namespace: plain-catalog
 spec:
   sourceType: grpc
-  image: sandbox.opentlc.com/example/plain-catalog:tag 
+  image: sandbox.opentlc.com/example/plain-catalog-production-image:tag 
   displayName: Plain operator catalog
   publisher: grpc
   updateStrategy:
